@@ -1,0 +1,54 @@
+#N canvas 6 26 941 700 12;
+#X obj 119 195 midilearn;
+#X obj 64 306 outlet;
+#X obj 64 273 / 127;
+#X obj 276 111 t b;
+#X obj 276 144 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 276 169 0;
+#X text 179 42 reset;
+#X text 275 35 stop learn;
+#X msg 179 64 0 0 1;
+#X obj 276 83 spigot 1;
+#X msg 276 58 1;
+#X obj 280 334 list;
+#X obj 393 304 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 272 272 pack f f 1 \$0;
+#X obj 393 272 r midisave;
+#X obj 280 368 s savelist;
+#X text 390 248 save request;
+#X obj 535 152 r loadmidi-\$0;
+#X msg 535 183 \$2 \$3 \$4;
+#X obj 100 100 cnv 15 29 40 empty empty empty 1 1 0 14 #000000 #404040
+0;
+#X obj 116 101 tgl 11 0 empty empty empty 17 7 0 10 #ff0400 #000000
+#000000 0 1;
+#X obj 102 101 bng 11 250 50 0 empty empty empty 17 7 0 10 #e3c6ff
+#000000 #000000;
+#X obj 102 113 moonlib/mknob 25 100 0 127 0 0 empty empty empty -2
+-6 0 8 #404040 #ffffff #000000 0 1;
+#X connect 0 0 2 0;
+#X connect 0 0 22 0;
+#X connect 0 1 9 0;
+#X connect 0 1 13 0;
+#X connect 0 2 13 1;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 9 1;
+#X connect 5 0 20 0;
+#X connect 8 0 0 1;
+#X connect 9 0 3 0;
+#X connect 10 0 9 1;
+#X connect 11 0 15 0;
+#X connect 12 0 11 0;
+#X connect 13 0 11 1;
+#X connect 14 0 12 0;
+#X connect 17 0 18 0;
+#X connect 18 0 0 1;
+#X connect 20 0 10 0;
+#X connect 20 0 0 0;
+#X connect 21 0 8 0;
+#X connect 22 0 2 0;
+#X coords 0 -1 1 1 29 40 2 100 100;

@@ -1,0 +1,52 @@
+#N canvas 6 26 941 700 12;
+#X obj 100 117 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 #404040
+#ffffff #000000 0 1;
+#X obj 101 101 tgl 13 0 empty empty empty 17 7 0 10 #ff0400 #ffffff
+#000000 0 1;
+#X obj 101 249 bng 13 250 50 0 empty empty empty 17 7 0 10 #e3c6ff
+#ffffff #000000;
+#X obj 193 203 midilearn;
+#X obj 138 314 outlet;
+#X obj 138 281 / 127;
+#X obj 350 119 t b;
+#X obj 350 152 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 350 177 0;
+#X text 253 50 reset;
+#X text 349 43 stop learn;
+#X msg 253 72 0 0 1;
+#X obj 350 91 spigot 1;
+#X msg 350 66 1;
+#X obj 354 342 list;
+#X obj 467 312 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 346 280 pack f f 1 \$0;
+#X obj 467 280 r midisave;
+#X obj 354 376 s savelist;
+#X text 464 256 save request;
+#X obj 609 160 r loadmidi-\$0;
+#X msg 609 191 \$2 \$3 \$4;
+#X connect 0 0 5 0;
+#X connect 1 0 13 0;
+#X connect 1 0 3 0;
+#X connect 2 0 11 0;
+#X connect 3 0 5 0;
+#X connect 3 0 0 0;
+#X connect 3 1 12 0;
+#X connect 3 1 16 0;
+#X connect 3 2 16 1;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 12 1;
+#X connect 8 0 1 0;
+#X connect 11 0 3 1;
+#X connect 12 0 6 0;
+#X connect 13 0 12 1;
+#X connect 14 0 18 0;
+#X connect 15 0 14 0;
+#X connect 16 0 14 1;
+#X connect 17 0 15 0;
+#X connect 20 0 21 0;
+#X connect 21 0 3 1;
+#X coords 0 -1 1 1 15 163 2 100 100;

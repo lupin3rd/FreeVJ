@@ -1,0 +1,25 @@
+#N canvas 6 58 941 700 12;
+#X msg 132 371 disconnect;
+#X obj 66 295 list prepend send;
+#X obj 66 320 list trim;
+#X text 35 228 send;
+#X obj 141 434 print backward;
+#X obj 66 395 netsend -u -b;
+#X obj 29 257 r QLCsend;
+#X obj 103 115 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 120 112 connect;
+#X obj 103 133 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 120 130 disc;
+#X text 115 99 QLC osc;
+#X msg 92 346 connect 127.0.0.1 8000;
+#X connect 0 0 5 0;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 5 1 4 0;
+#X connect 6 0 1 0;
+#X connect 7 0 12 0;
+#X connect 9 0 0 0;
+#X connect 12 0 5 0;
+#X coords 0 -1 1 1 80 50 2 100 100;
